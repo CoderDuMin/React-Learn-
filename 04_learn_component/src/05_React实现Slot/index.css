@@ -1,0 +1,16 @@
+.navbar{
+  display: flex;
+}
+.item{
+  line-height: 44px;
+  text-align: center;
+  color: #000;
+}
+.left-bar,.right-bar{
+  width: 80px;
+  background-color: lightblue;
+}
+.center-bar{
+  flex:1;
+  background-color: yellow;
+}
