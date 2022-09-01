@@ -1,0 +1,10 @@
+.modal{
+  width: 200px;
+  height: 120px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: skyblue;
+  border:1px solid #ddd;
+  transform: translate(-50%,-50%);
+}
