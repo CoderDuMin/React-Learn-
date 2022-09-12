@@ -1,0 +1,19 @@
+{
+  "name": "09_learn_redux",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "redux": "^4.0.5",
+    "yarn": "^1.22.19"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start":"node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type":"module"
+}
