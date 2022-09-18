@@ -1,0 +1,7 @@
+export const  INCREMENT = 'INCREMENT'
+export const  ADD_NUMBER = 'ADD_NUMBER'
+export const  DECREMENT = 'DECREMENT'
+export const  SUB_NUMBER = 'SUB_NUMBER'
+export const  CHANGE_BANNERS = 'CHANGE_BANNERS'
+export const  CHANGE_RECOMMEND = 'CHANGE_RECOMMEND'
+export const  FETCH_MULTIDATA = 'FETCH_MULTIDATA'
