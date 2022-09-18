@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div>
+    <a href="#/home">home</a>
+    <a href="#/about"> about</a>
+    <br>
+    <h2 class="content"></h2>
+  </div>
+
+  <script>
+    const contentEl = document.getElementsByTagName('h2')[0]
+    window.addEventListener('hashchange',()=>{
+      console.log(location.hash,contentEl);
+      switch(location.hash){
+        case '#/home':
+          contentEl.innerText = 'HOME'
+          break;
+        case '#/about':
+          contentEl.innerText = 'About'
+          break;
+      }
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div>
+    <a href="/home">home</a>
+    <a href="/about"> about</a>
+    <br>
+    <h2 class="content"></h2>
+  </div>
+
+  <script>
+    const hrefEls = document.getElementsByTagName('a')
+    const contentEl = document.getElementsByTagName('h2')[0]
+    for(let el of hrefEls){
+      el.addEventListener('click',(e)=>{
+        e.preventDefault()
+        history.pushState({},'',el.getAttribute('href'))
+        historyChange()
+      })
+    }
+    window.addEventListener('popstate',()=>{
+      historyChange()
+    })
+    function historyChange(){
+      switch(location.pathname){
+        case '/home':
+          contentEl.innerText = 'HOME'
+          break;
+        case '/about':
+          contentEl.innerText = 'About'
+          break;
+      }
+    }
+  </script>
+</body>
+</html>
