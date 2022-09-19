@@ -1,0 +1,8 @@
+a{
+  margin: 0 10px;
+}
+a.app-active{
+  font-size: 24px;
+  color:orange;
+
+}
