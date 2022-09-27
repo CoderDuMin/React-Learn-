@@ -17,6 +17,9 @@ import Profile from './05_useReducer使用/Profile'
 import CallbackHookDemo01 from './06_useCallback使用/01_useCallBack不能进行的性能优化'
 import CallbackHookDemo02 from './06_useCallback使用/02_useCallback能进行的性能优化'
 
+import UseMemoHookDemo01 from './07_useMemo使用/01_useMemo复杂计算的应用'
+import UseMemoHookDemo02 from './07_useMemo使用/02_usseMemo传入子组件应用类型'
+
 export const UserContext = createContext()
 export const FoodContext = createContext()
 export default class App extends PureComponent {
@@ -43,8 +46,13 @@ export default class App extends PureComponent {
         {/* <Home/>
         <Profile/> */}
 
-        {/* <CallbackHookDemo01 /> */}
-        <CallbackHookDemo02 />
+        {/* useCallBack */}
+        {/* <CallbackHookDemo01 />
+        <CallbackHookDemo02 /> */}
+
+        {/* useMemo */}
+        {/* <UseMemoHookDemo01 /> */}
+        <UseMemoHookDemo02 />
       </div>
     )
   }
