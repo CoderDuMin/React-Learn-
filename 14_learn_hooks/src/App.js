@@ -20,6 +20,13 @@ import CallbackHookDemo02 from './06_useCallback使用/02_useCallback能进行�
 import UseMemoHookDemo01 from './07_useMemo使用/01_useMemo复杂计算的应用'
 import UseMemoHookDemo02 from './07_useMemo使用/02_usseMemo传入子组件应用类型'
 
+import UseRefHookDemo01 from './08_useRef使用/01_useRef引用DOM'
+import UseRefHookDemo02 from './08_useRef使用/02_useRef引用其他数据'
+import ForwardRefDemo from './09_useImperativeHandle/01_回顾forwardRef的用法'
+import UseImperativeHandleDemo from './09_useImperativeHandle/02_useImperativeHandle用法'
+import UseLayoutEffectDemo01 from './10_useLayoutEffect使用/01_useEffect的count修改'
+import UseLayoutEffectDemo02 from './10_useLayoutEffect使用/02_useLayoutEffect的count修改'
+
 export const UserContext = createContext()
 export const FoodContext = createContext()
 export default class App extends PureComponent {
@@ -51,8 +58,20 @@ export default class App extends PureComponent {
         <CallbackHookDemo02 /> */}
 
         {/* useMemo */}
-        {/* <UseMemoHookDemo01 /> */}
-        <UseMemoHookDemo02 />
+        {/* <UseMemoHookDemo01 />
+        <UseMemoHookDemo02 /> */}
+
+        {/* useRef */}
+        {/* <UseRefHookDemo01 />
+        <UseRefHookDemo02 /> */}
+
+        {/* useImperativeHandle */}
+        {/* <ForwardRefDemo />
+        <UseImperativeHandleDemo /> */}
+
+        {/* useLayoutEffect */}
+        <UseLayoutEffectDemo01 />
+        <UseLayoutEffectDemo02 />
       </div>
     )
   }
