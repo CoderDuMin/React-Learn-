@@ -1,4 +1,4 @@
-import React, { createContext, PureComponent } from 'react'
+import React, { createContext, useState} from 'react'
 import CounterClass from './01_体验hooks/01_counter_class'
 import CounterHook from './01_体验hooks/02_counter_hook'
 import CounterHook2 from './01_体验hooks/03_counter_hook'
@@ -26,11 +26,16 @@ import ForwardRefDemo from './09_useImperativeHandle/01_回顾forwardRef的用�
 import UseImperativeHandleDemo from './09_useImperativeHandle/02_useImperativeHandle用法'
 import UseLayoutEffectDemo01 from './10_useLayoutEffect使用/01_useEffect的count修改'
 import UseLayoutEffectDemo02 from './10_useLayoutEffect使用/02_useLayoutEffect的count修改'
+import CustomLifeHook from './11_自定义hook/01_认识自定义hook'
+import CustomContextHook from './11_自定义hook/02_自定义hook-context共享'
+import CustomScrollPositionHook from './11_自定义hook/03_自定义Hook练习-获取滚动位置'
+import CustomDataStoreHook from './11_自定义hook/04_自定义Hook练习-localStorage存储'
 
 export const UserContext = createContext()
+export const TokenContext = createContext()
 export const FoodContext = createContext()
-export default class App extends PureComponent {
-  render() {
+export default function App() {
+  const [show, setShow] = useState(true);
     return (
       <div>
         {/* <CounterClass /> */}
@@ -70,9 +75,22 @@ export default class App extends PureComponent {
         <UseImperativeHandleDemo /> */}
 
         {/* useLayoutEffect */}
-        <UseLayoutEffectDemo01 />
-        <UseLayoutEffectDemo02 />
+        {/* <UseLayoutEffectDemo01 />
+        <UseLayoutEffectDemo02 /> */}
+
+        {/* 自定义hook */}
+
+        {/* {show && <CustomLifeHook />} */}
+        {/* <UserContext.Provider value={{name:'dumin',age:18,height:1.88}}>
+          <TokenContext.Provider value={'asdikanviidjfsj8wehjc.asdhwiuqhedajbnsd'}>
+            <CustomContextHook />
+          </TokenContext.Provider>
+        </UserContext.Provider> */}
+
+        {/* <CustomScrollPositionHook /> */}
+        {show && <CustomDataStoreHook/>}
+
+        <button onClick={e => setShow(!show)}>切换show</button>
       </div>
     )
-  }
 }
